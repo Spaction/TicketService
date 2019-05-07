@@ -1,0 +1,18 @@
+{
+  "name": "sampleticketservice",
+  "version": "1.0.0",
+  "description": "Showing skills full stack abilities",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run buildJs & npm run buildCss",
+    "buildJs": "browserify Scripts/map.js  -o wwwroot/js/site.js & browserify Scripts/layoutMustache.js -o wwwroot/js/layoutMustache.js",
+    "buildCss": "uglifycss node_modules/leaflet/dist/leaflet.css > wwwroot/css/map.css "
+  },
+  "author": "Mike Lunemann",
+  "license": "ISC",
+  "dependencies": {
+    "leaflet": "^1.4.0",
+    "mustache": "^3.0.1"
+  }
+}

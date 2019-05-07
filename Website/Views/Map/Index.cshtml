@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Reserve a Ticket";
+}
+<script>
+    var dataUrl = "@ViewBag.dataUrl";
+    var ShowId = @ViewBag.ShowId;
+</script>
+<link href="~/css/map.css" rel="stylesheet">
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<body>
+    <div id="map" style="height:85vh">
+
+    </div>
+    <label>Reserve email</label><input type="email" id="email" />
+    <label>Number of Seats</label><input type="number" id="numSeats" min="1" />
+    <button id="HoldX">Hold X number of seats</button>
+    <button id="HoldSelected">Hold selected seats</button>
+    <button id="Reserve">Reserve all held seats which are Selected</button>
+</body>
+<script src="~/js/site.js" type="text/javascript" asp-append-version="true"></script>
